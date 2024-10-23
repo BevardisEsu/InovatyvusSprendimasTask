@@ -11,8 +11,7 @@ class TruckSubunit extends Model
         'main_truck_id',
         'subunit_truck_id',
         'start_date',
-        'end_date',
-        'created_by'
+        'end_date'
     ];
 
     protected $casts = [
