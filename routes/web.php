@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TruckController;
 use App\Http\Controllers\TruckSubunitController;
-
+use App\Http\Controllers\ActivityLogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +36,5 @@ Route::controller(TruckSubunitController::class)->group(function () {
     Route::post('/trucks/{truck}/subunits', 'store')->name('trucks.subunits.store');
     Route::delete('/trucks/{truck}/subunits/{subunit}', 'destroy')->name('trucks.subunits.destroy');
 });
+
+Route::get('/activity-logs', [ActivityLogController::class, 'show'])->name('activity-logs.show');

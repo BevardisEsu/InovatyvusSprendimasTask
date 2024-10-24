@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Truck;
 use App\Models\TruckSubunit;
 use Illuminate\Http\Request;
+use App\Traits\LogsActivity;
 
 class TruckSubunitController extends Controller
 {
+    use LogsActivity;
     public function create(Truck $truck)
     {
         // Get all trucks except the current one and those that are already subunits

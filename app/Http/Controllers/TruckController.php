@@ -7,8 +7,10 @@ use App\Models\Truck;
 use App\Models\TruckSubunit;
 use Illuminate\Validation\Rule;
 use Carbon\Carbon;
+use App\Traits\LogsActivity;
 class TruckController extends Controller
 {
+    use LogsActivity;
     public function index()
     {
         $trucks = Truck::orderBy('created_at', 'desc')->get();

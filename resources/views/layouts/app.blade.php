@@ -22,22 +22,25 @@
     </script>
 </head>
 <body class="bg-gray-50">
-    <nav class="bg-primary-DEFAULT shadow-lg">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <span class="text-gray-300 text-xl font-bold">Truck Management</span>
-                    </div>
-                    <div class="hidden md:ml-6 md:flex md:items-center">
-                        <a href="{{ route('trucks.index') }}" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-md mr-2">
-                            Trucks
-                        </a>
-                    </div>
+<nav class="bg-primary-DEFAULT shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+            <div class="flex">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-gray-300 text-xl font-bold">Truck Management</span>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center">
+                    <a href="{{ route('trucks.index') }}" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-md mr-2">
+                        Trucks
+                    </a>
+                    <a href="{{ route('activity-logs.show') }}" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-md">
+                        Activity Logs
+                    </a>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <main class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         @if(session('success'))

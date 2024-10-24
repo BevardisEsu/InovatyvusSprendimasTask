@@ -51,7 +51,7 @@
         Cancel
     </a>
     <button type="submit" 
-            class="bg-[#2563EB] text-white font-bold py-2 px-4 rounded">
+    class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg transition duration-300 ease-in-out">
         Add Subunit
     </button>
 </div>
