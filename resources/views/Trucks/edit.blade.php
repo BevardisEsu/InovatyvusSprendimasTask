@@ -5,7 +5,17 @@
 @section('content')
 <div class="bg-white shadow-sm rounded-lg max-w-2xl mx-auto">
     <div class="p-6">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Edit Truck</h2>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Edit Truck {{ $truck->unit_number }}</h2>
+
+        @if ($errors->any())
+            <div class="bg-red-50 text-red-500 p-4 rounded mb-6">
+                <ul class="list-disc pl-5">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         <form action="{{ route('trucks.update', $truck) }}" method="POST">
             @csrf
@@ -42,7 +52,7 @@
                     <a href="{{ route('trucks.index') }}" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded mr-2">
                         Cancel
                     </a>
-                    <button type="submit" class="bg-primary-DEFAULT hover:bg-primary-dark text-white font-bold py-2 px-4 rounded">
+                    <button type="submit" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg transition duration-300 ease-in-out">
                         Update Truck
                     </button>
                 </div>
@@ -50,3 +60,4 @@
         </form>
     </div>
 </div>
+@endsection

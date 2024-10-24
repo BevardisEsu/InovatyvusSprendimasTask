@@ -19,7 +19,7 @@ Route::get('/', function () {
     return redirect()->route('trucks.index');
 });
 
-// Truck routes with TruckController
+// Truck routes TruckController
 Route::controller(TruckController::class)->group(function () {
     Route::get('/trucks', 'index')->name('trucks.index');
     Route::get('/trucks/create', 'create')->name('trucks.create');
@@ -30,7 +30,7 @@ Route::controller(TruckController::class)->group(function () {
     Route::delete('/trucks/{truck}', 'destroy')->name('trucks.destroy');
 });
 
-// Subunit routes with TruckSubunitController
+// Subunit routes Subunit controller
 Route::controller(TruckSubunitController::class)->group(function () {
     Route::get('/trucks/{truck}/subunits/create', 'create')->name('trucks.subunits.create');
     Route::post('/trucks/{truck}/subunits', 'store')->name('trucks.subunits.store');

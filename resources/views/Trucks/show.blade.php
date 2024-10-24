@@ -11,7 +11,7 @@
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-2xl font-semibold text-gray-800">Truck Details</h2>
                 <div>
-                    <a href="{{ route('trucks.edit', $truck) }}" class="bg-primary-DEFAULT hover:bg-primary-dark text-white font-bold py-2 px-4 rounded mr-2">
+                    <a href="{{ route('trucks.edit', $truck) }}" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
                         Edit Truck
                     </a>
                 </div>
@@ -39,7 +39,7 @@
         <div class="p-6">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-2xl font-semibold text-gray-800">Subunits</h2>
-                <a href="{{ route('trucks.subunits.create', $truck) }}" class="bg-primary-DEFAULT hover:bg-primary-dark text-white font-bold py-2 px-4 rounded">
+                <a href="{{ route('trucks.subunits.create', $truck) }}" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded">
                     Add Subunit
                 </a>
             </div>
