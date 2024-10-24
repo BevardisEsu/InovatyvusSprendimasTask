@@ -1,0 +1,22 @@
+- Create, read, update, and delete trucks
+  - Track truck details including unit number, year, and notes
+  - Modern interface with intuitive year selection
+
+- **Substitute Unit Management**
+  - Assign substitute trucks to main units
+  - Track substitution periods with start and end dates
+  - Prevent double assignments and validate date ranges
+
+- **Activity Logging**
+  - Comprehensive logging of all system changes
+  - Track who made changes and when
+  - View detailed change history with before/after values
+  - Filter logs by date range
+
+## Requirements
+
+- PHP >= 8.0
+- Laravel 10.x
+- MySQL/MariaDB
+- Composer
+- Node.js & NPM (for asset compilation)
